@@ -1,14 +1,17 @@
 body {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     background-color: #c2f7bd;
     font-family: Helvetica;
 }
 
 #main-container {
-    max-width: 550px;
+    max-width: 1050px;
     display: flex;
     margin: 10px 0px;
+    margin-bottom: 0px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -39,4 +42,60 @@ input[type="button"] {
     border-radius: 5px;
     font-style: italic;
     color: #1c2419;
+}
+
+.giphy-embed {
+    display: none;
+    margin: 10px 0px;
+    border-radius: 50px;
+}
+
+@media (max-width: 767px) {
+    #main-container {
+        max-width: 350px;
+    }
+
+    img {
+        max-width: 300px;
+    }
+    
+    .giphy-embed {
+        display: flex;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 320px) {
+    #main-container {
+        max-width: 250px;
+    }
+
+    img {
+        max-width: 200px;
+    }
+    
+    .giphy-embed {
+        display: flex;
+        max-width: 250px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    #main-container {
+        max-width: 750px;
+    }
+
+    img {
+        max-width: 500px;
+    }
+
+    input[type="button"] {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+    
+    /* .giphy-embed {
+        display: flex;
+        max-width: 350px;
+    } */
 }
